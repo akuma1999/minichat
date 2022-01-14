@@ -1,0 +1,132 @@
+.home-box-root {
+    position: relative;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-title {
+    font-size: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.home-body {
+    background-color: blanchedalmond;
+    overflow: scroll;
+    width: 60%;
+    border-radius: 20px;
+    height: 600px;
+    margin: 20px;
+    padding: 20px 20px 50px 20px;
+    box-shadow: 0px 0px 8px 2px black;
+}
+
+.home-body::-webkit-scrollbar {
+    display: none;
+}
+
+.home-text-left {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-text-right {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.comment-title {
+    font-size: 15px;
+    background-color: rgba(0, 255, 255, 0.6);
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.comment-body {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.home-toast {
+    text-align: center;
+}
+
+/* comment */
+
+.comment-box {
+    background-color: rgba(196, 157, 106, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.comment-text {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-send {
+    width: 10%;
+    float: right;
+}
+/* nav */
+
+.nav {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.nav .icon svg {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.nav ol {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav ol li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    flex-direction: row;
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ol li:hover {
+    background-color: rgba(38, 153, 153, 0.3);
+}
+
+.nav ol li:active {
+    background-color: rgba(38, 153, 153, 0.4);
+}
