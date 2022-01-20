@@ -9,7 +9,6 @@ import { RootState } from '../Redux/reducers/index';
 // import component
 import Home from './Home';
 import Join from './Join';
-import Detail from './Detail';
 //
 
 export default function Root() {
@@ -19,25 +18,18 @@ export default function Root() {
     if (name === '') {
       return (
         <>
-          <Route path='/' element={<Join />} />
+          <Route path='/minichat' element={<Join />} />
           <Route path='*' element={<div>notfound</div>} />
         </>
       );
     } else {
       return (
         <>
-          <Route path='/' element={<Home />} />
+          <Route path='/minichat' element={<Home />} />
           <Route path='*' element={<div>notfound</div>} />
         </>
       );
     }
   };
-  return (
-    <Routes>
-      {check()}
-      {/* <Route path='/' element={<Home />} />
-      <Route path='/join' element={<Join />} />
-      <Route path='/detail' element={<Detail />} /> */}
-    </Routes>
-  );
+  return <Routes>{check()}</Routes>;
 }

@@ -8,6 +8,7 @@ const vendor = [
   'react-router-redux',
   'redux-thunk',
   '@emotion/react',
+  'react-icons',
   '@emotion/styled',
   '@mui/material',
   'moment',

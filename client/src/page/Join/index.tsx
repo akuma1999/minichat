@@ -12,6 +12,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 //
 
+import axios from 'axios';
+
 // import component
 import Select from '../../components/Select';
 //
@@ -25,10 +27,23 @@ export default function LoginPage() {
   };
 
   const submit = () => {
+    console.log(name);
+
     if (name === '') {
       alert('chưa điền tên mà ?');
     } else {
-      dispatch(actions.change_current_name(name));
+      axios
+        .post('https://chat-app-mini.herokuapp.com/', { name: name })
+        .then((res: any) => {
+          if (res.data === 'no') {
+            alert('tên bị trùng rồi !!');
+          } else {
+            dispatch(actions.change_current_name(name));
+          }
+        })
+        .catch((err: any) => {
+          console.log(err);
+        });
     }
   };
   return (
